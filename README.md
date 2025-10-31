@@ -1,4 +1,3 @@
-
 Vite-Project
 Michael Whalen
 •
@@ -31,16 +30,17 @@ Your work
 Assigned
 Private comments
 Assignment details
+
 ## 🎨 Lesson: Using Custom Properties (CSS Variables) and JS to Create Themes
 
 ### 🧠 Learning Objectives
 
 By the end of this lesson, students will be able to:
 
-* Define and use **CSS custom properties** (variables).
-* Explain how to reference and override them in different contexts.
-* Use **JavaScript** to dynamically change CSS variables by toggling class names.
-* Create a simple **light/dark or warm/cool theme switcher** for a webpage.
+- Define and use **CSS custom properties** (variables).
+- Explain how to reference and override them in different contexts.
+- Use **JavaScript** to dynamically change CSS variables by toggling class names.
+- Create a simple **light/dark or warm/cool theme switcher** for a webpage.
 
 ---
 
@@ -83,8 +83,8 @@ Think of it like using a **nickname** for your color — if you ever change `--p
 </body>
 ```
 
-* The `body` starts with the class `cool`.
-* There’s a heading and a button — this will be the theme toggle button.
+- The `body` starts with the class `cool`.
+- There’s a heading and a button — this will be the theme toggle button.
 
 ---
 
@@ -124,9 +124,9 @@ Think of it like using a **nickname** for your color — if you ever change `--p
 
 ### What’s Happening:
 
-* The `:root` defines **default color variables**.
-* `.cool` and `.warm` **override** the same variables with different color sets.
-* Elements like `.hero` and `.main` use those variables to color the background.
+- The `:root` defines **default color variables**.
+- `.cool` and `.warm` **override** the same variables with different color sets.
+- Elements like `.hero` and `.main` use those variables to color the background.
 
 So depending on which class (`cool` or `warm`) is on the `<body>`, the entire site changes theme!
 
@@ -154,9 +154,9 @@ document.querySelector(".btn").addEventListener("click", function () {
 2. `.addEventListener("click", ...)` → listens for a **click** on that button.
 3. Inside the function:
 
-   * It checks if the `body` has the class `"cool"`.
-   * If yes → it removes `"cool"` and adds `"warm"`.
-   * If not → it does the reverse.
+   - It checks if the `body` has the class `"cool"`.
+   - If yes → it removes `"cool"` and adds `"warm"`.
+   - If not → it does the reverse.
 
 When the class changes, the **CSS variables defined under that class** automatically change — so the colors update instantly.
 
@@ -185,18 +185,20 @@ You just changed what “primary” and “secondary” mean!
 
 **Activity 1 – Add a Dark Mode**
 
-* Create `.dark` and `.light` classes.
-* Use CSS variables for background and text color.
-* Add a “Switch Mode” button using the same JS pattern.
+- Create `.dark` and `.light` classes.
+- Use CSS variables for background and text color.
+- Add a “Switch Mode” button using the same JS pattern.
 
 **Activity 2 – Add More Themes**
 
-* Add a `.forest` theme (`green` shades) or `.ocean` theme (`teal` shades).
-* Modify the JavaScript to rotate between all themes.
+- Add a `.forest` theme (`green` shades) or `.ocean` theme (`teal` shades).
+- Modify the JavaScript to rotate between all themes.
 
 **Custom Font Sizes**
 
-* Create variables like `--base-font` or `--heading-font`.
-* Change them in `.large-text` or `.small-text` modes.
+- Create variables like `--base-font` or `--heading-font`.
+- Change them in `.large-text` or `.small-text` modes.
 
 ---
+
+` 
