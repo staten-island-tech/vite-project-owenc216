@@ -10,3 +10,4 @@ const koshka = document
       document.body.classList.remove("warm");
     }
   });
+x;
