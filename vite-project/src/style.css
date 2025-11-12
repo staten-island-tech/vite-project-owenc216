@@ -1,29 +1,42 @@
 :root {
-  --light-blue: #2998ff;
-  --dark-blue: #135cc5;
-  --light-red: #f87171;
-  --dark-red: #dc2626;
+  --light-light: #8bbde9;
+  --light-dark: #f6cbaf;
+  --dark-light: #cbc7b7;
+  --dark-dark: #6a4ca8;
 
   /* Intentions */
-  --primary: var(--light-blue);
-  --secondary: var(--dark-blue);
+  --primary: var(--light-light);
+  --secondary: var(--light-dark);
 }
 
 .cool {
-  --primary: var(--light-blue);
-  --secondary: var(--dark-blue);
+  --primary: var(--light-light);
+  --secondary: var(--light-dark);
 }
 
 .warm {
-  --primary: var(--light-red);
-  --secondary: var(--dark-red);
+  --primary: var(--dark-light);
+  --secondary: var(--dark-dark);
 }
 
 .hero {
   background-color: var(--primary);
+  font-size: 40px;
+  text-align: center;
+  margin: 0rem;
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: var(--secondary)
 }
 
 .main {
   background-color: var(--secondary);
-  height: 90vh;
+  height: 200vh;
+}
+.btn {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 10px;
+  border-color: var(--secondary)
+  
 }
