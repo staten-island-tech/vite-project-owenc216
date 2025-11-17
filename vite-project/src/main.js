@@ -232,9 +232,9 @@ function inject(answerset) {
   container.insertAdjacentHTML(
     "afterbegin",
     `<div class="card">
-        <h2 class="card-header">${answerset.question}</h2>
-        <h3 class="card-img" src="${answerset.choices}"/>
-        <h4 class="card-price">$${answerset.correctAnswer}</h4>
+        <h2 class="card-question">${answerset.question}</h2>
+        <h3 class="card-choices" src="${answerset.choices}"/>
+        <h4 class="card-correctAnswer">${answerset.correctAnswer}</h4>
       </div>`
   );
 }
