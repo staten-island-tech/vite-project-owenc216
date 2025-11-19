@@ -3,6 +3,8 @@
   --light-dark: #f6cbaf;
   --dark-light: #cbc7b7;
   --dark-dark: #6a4ca8;
+  --correct-color: green
+  --incorrect-color: red
 
   /* Intentions */
   --primary: var(--light-light);
@@ -33,7 +35,7 @@ body {
   background-color: var(--secondary);
   height: 200vh;
 }
-.btn {
+.modebtn {
   background-color: var(--primary);
   color: white;
   border-radius: 10px;
@@ -44,7 +46,32 @@ body {
   font-size: 40px;
   text-align: center;
   margin: 5rem;
-  border: 2px solid;
+  border: 3px solid;
   border-radius: 10px;
-  border-color: #293e66;
+  background-color: var(--secondary);
+  border-color: var(--primary);
+}
+.btnA {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 10px;
+  border-color: var(--secondary)
+}
+.btnB {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 10px;
+  border-color: var(--secondary)
+}
+.btnC {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 10px;
+  border-color: var(--secondary)
+}
+.btnD {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 10px;
+  border-color: var(--secondary)
 }

@@ -1,5 +1,5 @@
 import "./style.css";
-document.querySelector(".btn").addEventListener("click", function () {
+document.querySelector(".Modebtn").addEventListener("click", function () {
   if (document.body.classList.contains("cool")) {
     document.body.classList.add("warm");
     document.body.classList.remove("cool");
@@ -11,230 +11,289 @@ document.querySelector(".btn").addEventListener("click", function () {
 const answerset = [
   {
     question: "What is the capital city of Australia?",
-    choices: ["Sydney", "Melbourne", "Canberra", "Perth"],
+    choiceA: "Canberra",
+    choiceB: "Sydney",
+    choiceC: "Melbourne",
+    choiceD: "Perth",
     correctAnswer: "Canberra",
     category: "General Knowledge",
   },
   {
     question: "Which planet is known as the Red Planet?",
-    choices: ["Venus", "Mars", "Jupiter", "Saturn"],
+    choiceA: "Jupiter",
+    choiceB: "Mars",
+    choiceC: "Venus",
+    choiceD: "Saturn",
     correctAnswer: "Mars",
     category: "Science",
   },
   {
     question: "Who painted the Mona Lisa?",
-    choices: ["Leonardo da Vinci", "Michelangelo", "Raphael", "Donatello"],
+    choiceA: "Michelangelo",
+    choiceB: "Leonardo da Vinci",
+    choiceC: "Raphael",
+    choiceD: "Donatello",
     correctAnswer: "Leonardo da Vinci",
     category: "Entertainment",
   },
   {
     question: "What is the largest mammal on Earth?",
-    choices: ["Elephant", "Blue whale", "Giraffe", "Hippopotamus"],
+    choiceA: "Blue whale",
+    choiceB: "Elephant",
+    choiceC: "Giraffe",
+    choiceD: "Hippopotamus",
     correctAnswer: "Blue whale",
     category: "Science",
   },
   {
     question: "Which element has the chemical symbol 'O'?",
-    choices: ["Oxygen", "Gold", "Osmium", "Oxide"],
+    choiceA: "Gold",
+    choiceB: "Osmium",
+    choiceC: "Oxygen",
+    choiceD: "Oxide",
     correctAnswer: "Oxygen",
     category: "Science",
   },
   {
     question: "What is the fastest land animal?",
-    choices: ["Cheetah", "Lion", "Gazelle", "Leopard"],
+    choiceA: "Lion",
+    choiceB: "Cheetah",
+    choiceC: "Gazelle",
+    choiceD: "Leopard",
     correctAnswer: "Cheetah",
     category: "Science",
   },
   {
     question: "Which country hosted the 2016 Summer Olympics?",
-    choices: ["China", "Brazil", "Russia", "Japan"],
+    choiceA: "China",
+    choiceB: "Russia",
+    choiceC: "Brazil",
+    choiceD: "Japan",
     correctAnswer: "Brazil",
     category: "General Knowledge",
   },
   {
     question: "How many continents are there on Earth?",
-    choices: ["5", "6", "7", "8"],
+    choiceA: "6",
+    choiceB: "7",
+    choiceC: "5",
+    choiceD: "8",
     correctAnswer: "7",
     category: "General Knowledge",
   },
   {
     question: "What is the hardest natural substance on Earth?",
-    choices: ["Gold", "Iron", "Diamond", "Quartz"],
+    choiceA: "Iron",
+    choiceB: "Diamond",
+    choiceC: "Gold",
+    choiceD: "Quartz",
     correctAnswer: "Diamond",
     category: "Science",
   },
   {
     question: "What is the chemical formula for water?",
-    choices: ["CO₂", "H₂O", "HO₂", "H₂O₂"],
+    choiceA: "H₂O",
+    choiceB: "CO₂",
+    choiceC: "HO₂",
+    choiceD: "H₂O₂",
     correctAnswer: "H₂O",
     category: "Science",
   },
   {
     question: "Who played Jack in Titanic?",
-    choices: ["Leonardo DiCaprio", "Brad Pitt", "Tom Cruise", "Johnny Depp"],
+    choiceA: "Brad Pitt",
+    choiceB: "Tom Cruise",
+    choiceC: "Leonardo DiCaprio",
+    choiceD: "Johnny Depp",
     correctAnswer: "Leonardo DiCaprio",
     category: "Entertainment",
   },
   {
     question: "Which TV show features a coffee shop called Central Perk?",
-    choices: ["Friends", "How I Met Your Mother", "Seinfeld", "The Office"],
+    choiceA: "How I Met Your Mother",
+    choiceB: "Friends",
+    choiceC: "Seinfeld",
+    choiceD: "The Office",
     correctAnswer: "Friends",
     category: "Entertainment",
   },
   {
     question: "Who is known as the 'King of Pop'?",
-    choices: [
-      "Michael Jackson",
-      "Elvis Presley",
-      "Prince",
-      "Justin Timberlake",
-    ],
+    choiceA: "Elvis Presley",
+    choiceB: "Michael Jackson",
+    choiceC: "Prince",
+    choiceD: "Justin Timberlake",
     correctAnswer: "Michael Jackson",
     category: "Entertainment",
   },
   {
     question: "Which Marvel movie was the first to feature Black Panther?",
-    choices: [
-      "Black Panther",
-      "Captain America: Civil War",
-      "Avengers: Infinity War",
-      "Iron Man 3",
-    ],
+    choiceA: "Avengers: Infinity War",
+    choiceB: "Captain America: Civil War",
+    choiceC: "Black Panther",
+    choiceD: "Iron Man 3",
     correctAnswer: "Captain America: Civil War",
     category: "Entertainment",
   },
   {
     question: "Which Disney movie features the song 'Let It Go'?",
-    choices: ["Tangled", "Moana", "Frozen", "Encanto"],
+    choiceA: "Frozen",
+    choiceB: "Tangled",
+    choiceC: "Moana",
+    choiceD: "Encanto",
     correctAnswer: "Frozen",
     category: "Entertainment",
   },
   {
     question: "What is the longest river in the world?",
-    choices: [
-      "Amazon River",
-      "Nile River",
-      "Yangtze River",
-      "Mississippi River",
-    ],
+    choiceA: "Yangtze River",
+    choiceB: "Amazon River",
+    choiceC: "Nile River",
+    choiceD: "Mississippi River",
     correctAnswer: "Nile River",
     category: "General Knowledge",
   },
   {
     question: "Mount Everest is located in which mountain range?",
-    choices: ["Himalayas", "Andes", "Rockies", "Alps"],
+    choiceA: "Andes",
+    choiceB: "Himalayas",
+    choiceC: "Rockies",
+    choiceD: "Alps",
     correctAnswer: "Himalayas",
     category: "General Knowledge",
   },
   {
     question: "Which ocean is the largest?",
-    choices: [
-      "Atlantic Ocean",
-      "Pacific Ocean",
-      "Indian Ocean",
-      "Arctic Ocean",
-    ],
+    choiceA: "Atlantic Ocean",
+    choiceB: "Indian Ocean",
+    choiceC: "Pacific Ocean",
+    choiceD: "Arctic Ocean",
     correctAnswer: "Pacific Ocean",
     category: "General Knowledge",
   },
   {
     question: "Which country has the most people?",
-    choices: ["USA", "China", "India", "Russia"],
+    choiceA: "India",
+    choiceB: "China",
+    choiceC: "USA",
+    choiceD: "Russia",
     correctAnswer: "China",
     category: "General Knowledge",
   },
   {
     question:
       "Which animal is on the Australian coat of arms alongside the emu?",
-    choices: ["Koala", "Kangaroo", "Wombat", "Platypus"],
+    choiceA: "Wombat",
+    choiceB: "Kangaroo",
+    choiceC: "Koala",
+    choiceD: "Platypus",
     correctAnswer: "Kangaroo",
     category: "General Knowledge",
   },
   {
     question: "What planet is closest to the sun?",
-    choices: ["Mercury", "Venus", "Earth", "Mars"],
+    choiceA: "Venus",
+    choiceB: "Earth",
+    choiceC: "Mercury",
+    choiceD: "Mars",
     correctAnswer: "Mercury",
     category: "Science",
   },
   {
     question: "What is the main gas found in the air we breathe?",
-    choices: ["Nitrogen", "Oxygen", "Carbon Dioxide", "Hydrogen"],
+    choiceA: "Oxygen",
+    choiceB: "Nitrogen",
+    choiceC: "Carbon Dioxide",
+    choiceD: "Hydrogen",
     correctAnswer: "Nitrogen",
     category: "Science",
   },
   {
     question: "Who is credited with inventing the telephone?",
-    choices: [
-      "Alexander Graham Bell",
-      "Thomas Edison",
-      "Nikola Tesla",
-      "Guglielmo Marconi",
-    ],
+    choiceA: "Thomas Edison",
+    choiceB: "Alexander Graham Bell",
+    choiceC: "Nikola Tesla",
+    choiceD: "Guglielmo Marconi",
     correctAnswer: "Alexander Graham Bell",
     category: "General Knowledge",
   },
   {
     question: "How many bones are in the adult human body?",
-    choices: ["202", "206", "210", "201"],
+    choiceA: "210",
+    choiceB: "206",
+    choiceC: "202",
+    choiceD: "201",
     correctAnswer: "206",
     category: "Science",
   },
   {
     question: "Which planet has the most moons?",
-    choices: ["Earth", "Mars", "Jupiter", "Saturn"],
+    choiceA: "Saturn",
+    choiceB: "Earth",
+    choiceC: "Mars",
+    choiceD: "Jupiter",
     correctAnswer: "Jupiter",
     category: "Science",
   },
   {
     question: "Who was the first President of the United States?",
-    choices: [
-      "George Washington",
-      "Abraham Lincoln",
-      "Thomas Jefferson",
-      "John Adams",
-    ],
+    choiceA: "Abraham Lincoln",
+    choiceB: "George Washington",
+    choiceC: "Thomas Jefferson",
+    choiceD: "John Adams",
     correctAnswer: "George Washington",
     category: "General Knowledge",
   },
   {
     question: "In which year did World War II end?",
-    choices: ["1944", "1945", "1946", "1947"],
+    choiceA: "1947",
+    choiceB: "1946",
+    choiceC: "1945",
+    choiceD: "1944",
     correctAnswer: "1945",
     category: "General Knowledge",
   },
   {
     question: "Who wrote 'Romeo and Juliet'?",
-    choices: [
-      "William Shakespeare",
-      "Charles Dickens",
-      "Mark Twain",
-      "Jane Austen",
-    ],
+    choiceA: "Charles Dickens",
+    choiceB: "William Shakespeare",
+    choiceC: "Mark Twain",
+    choiceD: "Jane Austen",
     correctAnswer: "William Shakespeare",
     category: "Entertainment",
   },
   {
     question: "What ancient civilization built the pyramids?",
-    choices: ["Romans", "Egyptians", "Greeks", "Mayans"],
+    choiceA: "Greeks",
+    choiceB: "Romans",
+    choiceC: "Egyptians",
+    choiceD: "Mayans",
     correctAnswer: "Egyptians",
     category: "General Knowledge",
   },
   {
     question:
       "The Great Wall of China was built primarily to protect against whom?",
-    choices: ["Persians", "Mongols", "Japanese", "Russians"],
+    choiceA: "Persians",
+    choiceB: "Russians",
+    choiceC: "Mongols",
+    choiceD: "Japanese",
     correctAnswer: "Mongols",
     category: "General Knowledge",
   },
 ];
+
 function inject(answerset) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "afterbegin",
     `<div class="card">
         <h2 class="card-question">${answerset.question}</h2>
-        <h3 class="card-choices" src="${answerset.choices}"/>
         <h4 class="card-correctAnswer">${answerset.correctAnswer}</h4>
+        <button class="btnA">${answerset.choiceA}</button>
+        <button class="btnB">${answerset.choiceB}</button>
+        <button class="btnC">${answerset.choiceC}</button>
+        <button class="btnD">${answerset.choiceD}</button>
       </div>`
   );
 }
@@ -258,5 +317,15 @@ function filterCard() {
     });
   });
 }
-filterCard(); /* cd vite-project
+filterCard();
+document.querySelector(".btnA").addEventListener("click", function () {
+  if (document.ody.classList.contains("cool")) {
+    document.body.classList.add("warm");
+    document.body.classList.remove("cool");
+  } else {
+    document.body.classList.add("cool");
+    document.body.classList.remove("warm");
+  }
+});
+/* cd vite-project
 npm run dev */
