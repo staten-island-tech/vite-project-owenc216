@@ -1,5 +1,5 @@
 import "./style.css";
-document.querySelector(".Modebtn").addEventListener("click", function () {
+document.querySelector(".modebtn").addEventListener("click", function () {
   if (document.body.classList.contains("cool")) {
     document.body.classList.add("warm");
     document.body.classList.remove("cool");
@@ -564,17 +564,34 @@ const answerset = [
 function inject(answerset) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
-    "afterbegin",
+    "beforeend",
     `<div class="card">
         <h2 class="card-question">${answerset.question}</h2>
-        <h4 class="card-correctAnswer">${answerset.correctAnswer}</h4>
         <button class="btnA">${answerset.choiceA}</button>
         <button class="btnB">${answerset.choiceB}</button>
         <button class="btnC">${answerset.choiceC}</button>
         <button class="btnD">${answerset.choiceD}</button>
       </div>`
   );
+  const newCard = container.lastElementChild;
+  addAnswerListeners(newCard, answerset);
 }
+function addAnswerListeners(card, item) {
+  const buttons = card.querySelectorAll("button");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const isCorrect = btn.textContent === item.correctAnswer;
+
+      if (isCorrect) {
+        btn.classList.add("correct");
+      } else {
+        btn.classList.add("incorrect");
+      }
+    });
+  });
+}
+
 let id = 0;
 answerset.forEach((item) => inject(item));
 function filterCard() {
@@ -596,14 +613,6 @@ function filterCard() {
   });
 }
 filterCard();
-document.querySelector(".btnA").addEventListener("click", function () {
-  if (document.body.classList.contains("correct")) {
-    document.body.classList.add("incorrect");
-    document.body.classList.remove("correct");
-  } else {
-    document.body.classList.add("correct");
-    document.body.classList.remove("incorrect");
-  }
-});
+
 /* cd vite-project
 npm run dev */

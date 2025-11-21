@@ -15,6 +15,7 @@
 
 .cool {
   --primary: var(--light-light);
+  
   --secondary: var(--light-dark);
 }
 
