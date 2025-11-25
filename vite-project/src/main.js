@@ -573,23 +573,8 @@ function inject(answerset) {
         <button class="btnD">${answerset.choiceD}</button>
       </div>`
   );
-  const newCard = container.lastElementChild;
-  addAnswerListeners(newCard, answerset);
-}
-function addAnswerListeners(card, item) {
-  const buttons = card.querySelectorAll("button");
-
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const isCorrect = btn.textContent === item.correctAnswer;
-
-      if (isCorrect) {
-        btn.classList.add("correct");
-      } else {
-        btn.classList.add("incorrect");
-      }
-    });
-  });
+  /*   const newCard = container.lastElementChild;
+  addAnswerListeners(newCard, answerset); */
 }
 
 let id = 0;
@@ -614,5 +599,24 @@ function filterCard() {
 }
 filterCard();
 
+let grade = 0;
+
+function gradingSystem() {}
+
 /* cd vite-project
 npm run dev */
+/* function addAnswerListeners(card, item) {
+  const buttons = card.querySelectorAll("button");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const isCorrect = btn.textContent === item.correctAnswer;
+
+      if (isCorrect) {
+        btn.classList.add("correct");
+      } else {
+        btn.classList.add("incorrect");
+      }
+    });
+  });
+} */

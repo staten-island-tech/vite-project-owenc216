@@ -6,7 +6,7 @@
   --correct-light: #90EE90;
   --correct-dark: #154734;
   --incorrect-light: #FF7F7F;
-  --incorrect-dark: #8B0000;
+  --incorrect-dark: #8B0000;      
 
   /* Intentions */
   --primary: var(--light-light);
