@@ -573,8 +573,8 @@ function inject(answerset) {
         <button class="btnD">${answerset.choiceD}</button>
       </div>`
   );
-  /*   const newCard = container.lastElementChild;
-  addAnswerListeners(newCard, answerset); */
+  const newCard = container.lastElementChild;
+  addAnswerListeners(newCard, answerset);
 }
 
 let id = 0;
@@ -605,7 +605,7 @@ function gradingSystem() {}
 
 /* cd vite-project
 npm run dev */
-/* function addAnswerListeners(card, item) {
+function addAnswerListeners(card, item) {
   const buttons = card.querySelectorAll("button");
 
   buttons.forEach((btn) => {
@@ -619,4 +619,4 @@ npm run dev */
       }
     });
   });
-} */
+}
