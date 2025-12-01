@@ -87,3 +87,7 @@ body {
   border-radius: 10px;
   border-color: var(--secondary)
 }
+.selected{
+  background-color: black;
+  color: white;
+}

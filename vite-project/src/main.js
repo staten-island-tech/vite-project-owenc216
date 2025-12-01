@@ -573,8 +573,8 @@ function inject(answerset) {
         <button class="btnD">${answerset.choiceD}</button>
       </div>`
   );
-  const newCard = container.lastElementChild;
-  addAnswerListeners(newCard, answerset);
+  /*   const newCard = container.lastElementChild;
+  addAnswerListeners(newCard, answerset); */
 }
 
 let id = 0;
@@ -599,13 +599,24 @@ function filterCard() {
 }
 filterCard();
 
-let grade = 0;
+let answer = {};
+function addAnswerListeners(card, item) {
+  const buttons = card.querySelectorAll("button");
 
-function gradingSystem() {}
+  buttons.forEact((btn) => {
+    btn.addEventListener("click", () => {
+      buttons.forEach((b) => {
+        b.classList.remove("selected");
+      });
+      btn.classList.add("selected");
+      answer[item.question] = btn.textContext;
+    });
+  });
+}
 
 /* cd vite-project
 npm run dev */
-function addAnswerListeners(card, item) {
+/* function addAnswerListeners(card, item) {
   const buttons = card.querySelectorAll("button");
 
   buttons.forEach((btn) => {
@@ -620,3 +631,4 @@ function addAnswerListeners(card, item) {
     });
   });
 }
+ */
