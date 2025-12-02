@@ -610,6 +610,7 @@ function addAnswerListeners(card, item) {
       });
       btn.classList.add("selected");
       answer[item.question] = btn.textContext;
+      i;
     });
   });
 }
