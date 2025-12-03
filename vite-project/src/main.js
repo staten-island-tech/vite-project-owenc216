@@ -573,8 +573,8 @@ function inject(answerset) {
         <button class="btnD">${answerset.choiceD}</button>
       </div>`
   );
-  /*   const newCard = container.lastElementChild;
-  addAnswerListeners(newCard, answerset); */
+  const newCard = container.lastElementChild;
+  addAnswerListeners(newCard, answerset);
 }
 
 let id = 0;
@@ -599,7 +599,7 @@ function filterCard() {
 }
 filterCard();
 
-let answer = {};
+let userAnswer = {};
 function addAnswerListeners(card, item) {
   const buttons = card.querySelectorAll("button");
 
@@ -614,6 +614,30 @@ function addAnswerListeners(card, item) {
     });
   });
 }
+document.querySelector(".gradeBtn").addEventListener("click", () => {
+  let score = 0;
+  document.querySelectorAll(".card").forEach((card) => {
+    const questionText = card.querySelector(".card-question").textContent;
+    const item = answerset.find((q) => q.question === questionText);
+    const buttons = card.querySelectorAll("button");
+
+    buttons.forEach((btn) => {
+      const choice = btn.textContent;
+      const correct = item.correctAnswer;
+      if (choice === correct) {
+        btn.style.backgroundColor = "green";
+        btn.style.color = "white";
+      }
+      if (choice === userAnswer[questionText] && choice != correct) {
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+      }
+    });
+    if (userAnswer[questionText] === item.correctAnswer) {
+      score++;
+    }
+  }); 
+});
 
 /* cd vite-project
 npm run dev */
