@@ -603,13 +603,11 @@ let userAnswer = {};
 function addAnswerListeners(card, item) {
   const buttons = card.querySelectorAll("button");
 
-  buttons.forEact((btn) => {
+  buttons.forEacj((btn) => {
     btn.addEventListener("click", () => {
-      buttons.forEach((b) => {
-        b.classList.remove("selected");
-      });
+      buttons.forEach((b) => b.classList.remove("selected"));
       btn.classList.add("selected");
-      answer[item.question] = btn.textContext;
+      userAnswer[item.question] = btn.textContext;
       i;
     });
   });
@@ -628,7 +626,7 @@ document.querySelector(".gradeBtn").addEventListener("click", () => {
         btn.style.backgroundColor = "green";
         btn.style.color = "white";
       }
-      if (choice === userAnswer[questionText] && choice != correct) {
+      if (choice === userAnswer[item.question] && choice != correct) {
         btn.style.backgroundColor = "red";
         btn.style.color = "white";
       }
@@ -636,7 +634,7 @@ document.querySelector(".gradeBtn").addEventListener("click", () => {
     if (userAnswer[questionText] === item.correctAnswer) {
       score++;
     }
-  }); 
+  });
 });
 
 /* cd vite-project
