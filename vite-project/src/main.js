@@ -599,16 +599,15 @@ function filterCard() {
 }
 filterCard();
 
-let userAnswer = {};
+let userAnswer = [];
 function addAnswerListeners(card, item) {
   const buttons = card.querySelectorAll("button");
 
-  buttons.forEacj((btn) => {
+  buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       buttons.forEach((b) => b.classList.remove("selected"));
       btn.classList.add("selected");
       userAnswer[item.question] = btn.textContext;
-      i;
     });
   });
 }
@@ -631,10 +630,12 @@ document.querySelector(".gradeBtn").addEventListener("click", () => {
         btn.style.color = "white";
       }
     });
+    console.log(userAnswer);
     if (userAnswer[questionText] === item.correctAnswer) {
       score++;
     }
   });
+  console.log(score);
 });
 
 /* cd vite-project
