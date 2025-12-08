@@ -600,14 +600,20 @@ function filterCard() {
 filterCard();
 
 let userAnswer = [];
-function addAnswerListeners(card, item) {
+function addAnswerListeners(card) {
   const buttons = card.querySelectorAll("button");
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.classList.remove("selected"));
+      buttons.forEach((b) => {
+        b.classList.remove("selected");
+      });
       btn.classList.add("selected");
-      userAnswer[item.question] = btn.textContext;
+      buttons.forEach((b) => {
+        if (b.classList.contains("selected")) {
+          console.log("homiyak");
+        }
+      });
     });
   });
 }
@@ -625,12 +631,7 @@ document.querySelector(".gradeBtn").addEventListener("click", () => {
         btn.style.backgroundColor = "green";
         btn.style.color = "white";
       }
-      if (choice === userAnswer[item.question] && choice != correct) {
-        btn.style.backgroundColor = "red";
-        btn.style.color = "white";
-      }
     });
-    console.log(userAnswer);
     if (userAnswer[questionText] === item.correctAnswer) {
       score++;
     }
