@@ -62,6 +62,7 @@ body {
   border-radius: 10px;
   background-color: var(--secondary);
   border-color: var(--primary);
+  cursor: pointer;
 }
 .btnA {
   background-color: var(--primary);

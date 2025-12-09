@@ -398,7 +398,7 @@ const answerset = [
     category: "Entertainment",
   },
   {
-    question: "Which TV show features the coffee shop Central Perk?",
+    question: "Which TV show features the coffee shop Central Park?",
     choiceA: "Friends",
     choiceB: "The Office",
     choiceC: "Seinfeld",
@@ -579,6 +579,7 @@ function inject(answerset) {
 
 let id = 0;
 answerset.forEach((item) => inject(item));
+
 function filterCard() {
   const tabs = document.querySelectorAll("[data-category]");
   tabs.forEach((tab) => {
@@ -611,7 +612,6 @@ function addAnswerListeners(card) {
       btn.classList.add("selected");
       buttons.forEach((b) => {
         if (b.classList.contains("selected")) {
-          console.log("homiyak");
         }
       });
     });
