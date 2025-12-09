@@ -600,43 +600,44 @@ function filterCard() {
 }
 filterCard();
 
-let userAnswer = [];
+let userAnswer = {};
 function addAnswerListeners(card) {
   const buttons = card.querySelectorAll("button");
+  const questionText = card.querySelector(".card-question").textContent;
 
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      buttons.forEach((b) => {
-        b.classList.remove("selected");
-      });
+      buttons.forEach((b) => b.classList.remove("selected"));
       btn.classList.add("selected");
-      buttons.forEach((b) => {
-        if (b.classList.contains("selected")) {
-        }
-      });
+      userAnswer[questionText] = btn.textContent;
     });
   });
 }
 document.querySelector(".gradeBtn").addEventListener("click", () => {
   let score = 0;
+
   document.querySelectorAll(".card").forEach((card) => {
     const questionText = card.querySelector(".card-question").textContent;
     const item = answerset.find((q) => q.question === questionText);
+    const correct = item.correctAnswer;
     const buttons = card.querySelectorAll("button");
-
     buttons.forEach((btn) => {
       const choice = btn.textContent;
-      const correct = item.correctAnswer;
       if (choice === correct) {
         btn.style.backgroundColor = "green";
         btn.style.color = "white";
       }
+      if (btn.classList.contains("selected") && choice !== correct) {
+        btn.style.backgroundColor = "red";
+        btn.style.color = "white";
+      }
     });
-    if (userAnswer[questionText] === item.correctAnswer) {
+    if (userAnswer[questionText] === correct) {
       score++;
     }
   });
-  console.log(score);
+  console.log("Score:", score);  
+  alert(`Your score: ${score}/60`);
 });
 
 /* cd vite-project
