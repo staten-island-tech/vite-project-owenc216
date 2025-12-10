@@ -636,25 +636,6 @@ document.querySelector(".gradeBtn").addEventListener("click", () => {
       score++;
     }
   });
-  console.log("Score:", score);  
+  console.log("Score:", score);
   alert(`Your score: ${score}/60`);
 });
-
-/* cd vite-project
-npm run dev */
-/* function addAnswerListeners(card, item) {
-  const buttons = card.querySelectorAll("button");
-
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const isCorrect = btn.textContent === item.correctAnswer;
-
-      if (isCorrect) {
-        btn.classList.add("correct");
-      } else {
-        btn.classList.add("incorrect");
-      }
-    });
-  });
-}
- */
